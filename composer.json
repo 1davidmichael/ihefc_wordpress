@@ -38,5 +38,8 @@
       "web/wp-content/uploads"      
     ],
     "wordpress-install-dir": "web"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
   }
 }
