@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: composer:latest
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - composer-cache
+
+      - run:
+          name: composer-update
+          command: composer update
+
+      - save_cache:
+          key: composer-cache
+          paths:
+            - $HOME/.composer/cache
